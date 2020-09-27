@@ -7,6 +7,7 @@ RUN apt-get update && apt-get upgrade -y \
        systemd-cron \
        python3.7 \
        ca-certificates \
+       procps \
        sudo \
     && ln -s /usr/bin/python3.7 /usr/bin/python \
     && rm -Rf /var/lib/apt/lists/* \
