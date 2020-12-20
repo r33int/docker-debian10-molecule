@@ -20,5 +20,7 @@ RUN apt-get update && apt-get upgrade -y \
 COPY files/initctl_faker .
 RUN chmod +x initctl_faker && rm -fr /sbin/initctl && ln -s /initctl_faker /sbin/initctl
 
+RUN useradd -ms /bin/bash  ansible
+
 VOLUME [ "/sys/fs/cgroup" ]
 CMD [ "/lib/systemd/systemd" ]
